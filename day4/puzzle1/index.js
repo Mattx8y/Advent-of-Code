@@ -1,11 +1,11 @@
 const fs = require("fs");
 const md5 = require("md5");
-const input = fs.readFileSync("../input.txt", {encoding: "utf-8"});
+const input = fs.readFileSync("./input.txt", {encoding: "utf-8"});
 
-let hex = "0";
+let resp;
 for (let i = 0; true; i++) {
-  hex = i.toString(16);
-  if (md5(input + hex).startsWith("00000")) break;
+  resp = i;
+  if (md5(input + i).startsWith("00000")) break;
 }
 
-console.log(hex);
+console.log(resp);
