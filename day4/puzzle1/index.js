@@ -1,6 +1,6 @@
 const fs = require("fs");
 const md5 = require("md5");
-const input = fs.readFileSync("./input.txt", {encoding: "utf-8"});
+const input = fs.readFileSync("../input.txt", {encoding: "utf-8"});
 
 let resp;
 for (let i = 0; true; i++) {
