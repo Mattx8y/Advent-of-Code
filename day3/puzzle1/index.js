@@ -21,8 +21,7 @@ for (let i = 0; i < inputArray.length; i++) {
       x--;
       break;
   }
-  if (!memory[x + "," + y]) memory[x + "," + y] = 0;
-  memory[x + "," + y]++;
+  memory[x + "," + y] = true;
 }
 
 console.log(Object.keys(memory).length);
