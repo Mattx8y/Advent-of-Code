@@ -3,12 +3,12 @@ const input = fs.readFileSync("../input.txt", {encoding: "utf-8"});
 
 const inputArray = input.split("");
 let floor = 0;
-inputArray.forEach(item => {
-  if (item === "(") {
+for (let i = 0; i < inputArray.length; i++) {
+  if (inputArray[i] === "(") {
     floor++;
-  } else if (item === ")") {
+  } else if (inputArray[i] === ")") {
     floor--;
   }
-});
+};
 
 console.log(floor);
