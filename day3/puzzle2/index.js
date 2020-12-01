@@ -1,5 +1,5 @@
 const fs = require("fs");
-const input = fs.readFileSync("./input.txt", {encoding: "utf-8"});
+const input = fs.readFileSync("../input.txt", {encoding: "utf-8"});
 
 const inputArray = input.split("");
 const memory = {"0,0": 1};
