@@ -1,21 +1,19 @@
 const fs = require("fs");
 const input = fs.readFileSync("../input.txt", {encoding: "utf-8"});
 
-const inputArray = input.split("\n").map(n => parseInt(n));
-let numberA, numberB, numberC;
-(() => {
-  for (let i = 0; i < inputArray.length; i++) {
-    for (let j = i + 1; j < inputArray.length; j++) {
-      for (let k = j + 1; k < inputArray.length; k++) {
-        if (inputArray[i] + inputArray[j] + inputArray[k] === 2020) {
-          numberA = inputArray[i];
-          numberB = inputArray[j];
-          numberC = inputArray[k];
-          return;
-        }
-      }
-    }
+const inputArray = input.split("");
+let floor = 0;
+let position;
+for (let i = 0; i < inputArray.length; i++) {
+  if (inputArray[i] === "(") {
+    floor++;
+  } else if (inputArray[i] === ")") {
+    floor--;
   }
-})();
+  if (floor < 0) {
+    position = i + 1;
+    break;
+  }
+}
 
-console.log(numberA * numberB * numberC);
+console.log(position);
