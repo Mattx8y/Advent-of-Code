@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const input = fs.readFileSync("./input.txt", {encoding: "utf-8"}).split("\n\n");
+const input = fs.readFileSync("../input.txt", {encoding: "utf-8"}).split("\n\n");
 
 let count = 0;
 for (let i = 0; i < input.length; i++) {
